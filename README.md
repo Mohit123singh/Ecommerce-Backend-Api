@@ -2,7 +2,7 @@
 
 A RESTful E-commerce Backend API built with **Node.js, Express.js, MongoDB, and Mongoose**.
 
-This project provides the backend infrastructure for an e-commerce application, including user authentication, product management, shopping-cart functionality, order-related workflows, and secure API access using JWT.
+This project provides the backend infrastructure for an e-commerce application, including user authentication, product management, product reviews, search/filtering, pagination, top-rated products,shopping-cart functionality, order-related workflows,payment gateway integration using PayPal and secure API access using JWT.
 
 🔗 **Repository:** https://github.com/Mohit123singh/Ecommerce-Backend-Api
 
@@ -14,10 +14,13 @@ This project provides the backend infrastructure for an e-commerce application, 
 
 - 🔐 User authentication using **JWT**
 - 🔑 Password hashing using **bcryptjs**
-- 👤 User management and protected routes
-- 🛍️ Product management
+- 👤 Admin User management and protected routes
+- 🛍️ Admin Product management with            **pagination** and **search/filtering by name**
+- ⭐ **User Reviews and Ratings system** (Create review per user)
+- 🔥 **Top Rated Products** selection based on average ratings
 - 🛒 Shopping cart functionality
-- 📦 E-commerce order management
+- 📦 E-commerce order management by Admin
+- 💳 **PayPal Payment Integration** for secure checkout
 - 🖼️ File/image upload handling using **Multer**
 - 🍪 Cookie-based request handling using **cookie-parser**
 - 🗄️ MongoDB database integration using **Mongoose**
@@ -38,6 +41,7 @@ This project provides the backend infrastructure for an e-commerce application, 
 | **Mongoose** | MongoDB ODM |
 | **JWT** | Authentication & authorization |
 | **bcryptjs** | Password hashing |
+| **PayPal SDK / API** | Online payment processing |
 | **Multer** | File upload handling |
 | **Cookie Parser** | Cookie handling |
 | **dotenv** | Environment configuration |
@@ -62,7 +66,8 @@ Express.js REST API
    │
    ├── Cart Management
    │
-   └── Order Management
+   └── Order & Payment Management
+           └── PayPal Integration
    │
    ▼
 Mongoose
@@ -109,6 +114,7 @@ Make sure you have the following installed:
 - npm
 - MongoDB or a MongoDB Atlas database
 - Git
+- PayPal Developer Account (for API Client ID)
 
 ---
 
